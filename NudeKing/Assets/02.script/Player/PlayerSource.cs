@@ -6,7 +6,7 @@ public class PlayerSource : MonoBehaviour {
 
 	public Vector3 firstPosition;
 
-	static public float speed = 400.0f;
+	static public float speed = 4.0f;
 
 	protected Gyroscope gyro;
 
@@ -99,13 +99,17 @@ public class PlayerSource : MonoBehaviour {
 
 	float GetGraph(float a){
 		if(a<0)
-			return a * a *(-1)/3.0f;
+			return a * a *(-1)/300.0f;
 		else
-			return a * a /3.0f;
+			return a * a /300.0f;
 	}
 
 	public void SelectZero(){
 		zeroAngle.x = Input.gyro.attitude.eulerAngles.x;
 		zeroAngle.y = Input.gyro.attitude.eulerAngles.y;
+	}
+	public void SelectReset(){
+		zeroAngle.x = 0;
+		zeroAngle.y = 0;
 	}
 }

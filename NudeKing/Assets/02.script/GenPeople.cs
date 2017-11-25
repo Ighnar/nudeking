@@ -46,12 +46,12 @@ public class GenPeople : MonoBehaviour {
 		float random;
 		switch (peopleNum) {
 		case 0:
-			random = Random.Range (-200, -100);
-			position = new Vector3(-375f,random,0.0f);
+			random = Random.Range (-8, 8);
+			position = new Vector3(-4.0f,random* 0.1f,0.0f);
 			break;
 		case 1:
-			random = Random.Range (-375, 375);
-			position = new Vector3(random ,667.0f,0.0f);
+			random = Random.Range (-2.7f, 2.7f);
+			position = new Vector3(random,4.8f,0.0f);
 			break;
 		}
 

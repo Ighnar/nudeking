@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class Player : PlayerSource {
 
-
 	public bool gameOver;
-
 
 	public GameObject _canvas;
 
 	PlayerInfo _playerInfo;
 	GameParam _gameParam;
 	Score _score;
-
+	UiSetting _uiSetting;
 	GenFake _genfake;
 
 	void Start () {
@@ -21,10 +19,10 @@ public class Player : PlayerSource {
 		_gameParam = GameManager.GetComponent<GameParam> ();
 		_score = _canvas.GetComponent<Score> ();
 		_genfake = GameManager.GetComponent<GenFake>();
-
+		_uiSetting = _canvas.GetComponent<UiSetting> ();
 		FakePlayer.gameparam = _gameParam;
 
-		firstPosition = new Vector3(3.82f, -491.0f, 0);
+		firstPosition = new Vector3(0.0f, -3.4f, 0);//new Vector3(3.82f, -491.0f, 0);
 	}
 	void Update(){
 		base.Update ();
@@ -39,7 +37,6 @@ public class Player : PlayerSource {
 			Destroy (other.gameObject);
 			break;
 		case "2":
-			print ("other.name:" + other.name);
 			//player가 item을 먹었는지 판단
 			if (!_gameParam.UsingItem1&&_gameParam.HavingItem1) {
 				_gameParam.HavingItem1 = false;
@@ -51,20 +48,20 @@ public class Player : PlayerSource {
 				
 			}else{
 				_gameParam.gameOver = true;
+				print ("Die");
 				//GAME OVER
+				_uiSetting.ShowPanel(0);
 			}
 			gameOver = _gameParam.gameOver;
 			break;
 		case "3":
 			_gameParam.HavingItem1 = true;
 			Destroy (other.gameObject);
-			print ("Item1");
 			break;
 		case "4":
 			//
 			_genfake.GenPlayer(transform.position);
 			Destroy (other.gameObject);
-			print ("Item2");
 			break;
 		}
 	}

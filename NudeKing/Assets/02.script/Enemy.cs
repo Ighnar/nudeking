@@ -11,8 +11,6 @@ public class Enemy : MonoBehaviour {
 
 	Vector3 DirectionVector;
 
-
-
 	void Start () {
 		gameparam = GameObject.FindGameObjectWithTag ("gamemanager").GetComponent<GameParam>();
 
@@ -30,11 +28,15 @@ public class Enemy : MonoBehaviour {
 		}
 
 
-		float Enemyspeed = 100.0f;
+		float Enemyspeed = 1.0f;
 
 		float DirectionSize = Mathf.Sqrt (DirectionVector.x * DirectionVector.x + DirectionVector.y * DirectionVector.y);
 
 		DirectionVector = DirectionVector / DirectionSize * Enemyspeed;
+
+		if (transform.position.y < -4.8f) {
+			Destroy (this.gameObject);
+		} 
 
 	}
 
