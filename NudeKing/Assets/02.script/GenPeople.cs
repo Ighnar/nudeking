@@ -8,52 +8,53 @@ public class GenPeople : MonoBehaviour {
 
 	int girlGenNum = 3;
 	int policeGenNum = 4;
-	private EnemyInfo _enemy;
 	// Use this for initialization
 
 	public void GeneratePeople(int time){
+		
+		
 		if(time % 50 == 0){
-			for (int i = 0; i < girlGenNum; i++) {
-		//		Vector3 randomPosition = GenPosition (0);
-		//		GameObject instanceGirl = (GameObject) Instantiate(people[0], randomPosition, Quaternion.identity);	
-				_enemy = Instance_enemy(0);
-			}
-		}else if(time % 20 == 0){
-			for (int i = 0; i < policeGenNum; i++) {
-		//		Vector3 randomPosition = GenPosition (1);
-		//		GameObject instancePol = (GameObject) Instantiate(people[1], randomPosition, Quaternion.identity);	
-				_enemy = Instance_enemy(1);
-			}		
+			for (int i = 0; i < girlGenNum; i++) 
+				Instance_girl();
+
+		}
+		if(time % 20 == 0){
+			for (int i = 0; i < policeGenNum; i++) 
+				Instance_enemy();
 		}
 		if (time % 15 == 0) {
-			policeGenNum += 1;
+			policeGenNum += (int)Random.Range(-1,1);
+			if (policeGenNum <= 2)
+				policeGenNum = 3;
 		}
 	}	
 
-	EnemyInfo Instance_enemy(int enemynum){
-		Vector3 randomPosition = GenPosition (enemynum);
-		GameObject instanceGirl = (GameObject)Instantiate (people[enemynum], randomPosition, Quaternion.identity);
-		EnemyInfo newEnemy = instanceGirl.GetComponent <EnemyInfo> ();
+	void Instance_enemy(){
+		Vector3 randomPosition = GenPosition (1);
+		GameObject instanceEnemy = (GameObject)Instantiate (people[1], randomPosition, Quaternion.identity);
 	
-		newEnemy.info (enemynum);
-		return newEnemy;
 	}
 
-
+	void Instance_girl(){
+		Vector3 randomPosition = GenPosition (0);
+		GameObject instanceGirl = (GameObject)Instantiate (people[0], randomPosition, Quaternion.identity);
+	}
 
 	Vector3 GenPosition(int peopleNum){
+		
 		Vector3 position = Vector3.zero;
 		float random;
 		switch (peopleNum) {
 		case 0:
-			random = Random.Range (-10, 10);
-			position = new Vector3(-4.2f,random * 0.1f,0.0f);
+			random = Random.Range (-200, -100);
+			position = new Vector3(-375f,random,0.0f);
 			break;
 		case 1:
-			random = Random.Range (15, 25);
-			position = new Vector3(random * 0.1f,6.2f,0.0f);
+			random = Random.Range (-375, 375);
+			position = new Vector3(random ,667.0f,0.0f);
 			break;
 		}
+
 		return position;
 	}
 }
