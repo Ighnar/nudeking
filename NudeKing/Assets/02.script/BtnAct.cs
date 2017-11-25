@@ -14,7 +14,6 @@ public class BtnAct : MonoBehaviour {
 	}
 	// Update is called once per frame
 	public void StartBtnAct(){
-		print ("start");
 		SceneManager.LoadScene ("GameScene");
 	}
 }
