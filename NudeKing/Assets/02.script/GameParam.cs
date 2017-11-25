@@ -8,18 +8,16 @@ public class GameParam : MonoBehaviour {
 		get;
 		set;
 	}
-
-	public bool gameStart {
+	public int itemNum {
 		get;
 		set;
 	}
-
 	void Awake(){
 		Init ();
 	}
 
 	public void Init(){
 		gameOver = false;
-		gameStart = false;
+		itemNum = 0;
 	}
 }

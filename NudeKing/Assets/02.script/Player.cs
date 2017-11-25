@@ -6,6 +6,7 @@ public class Player: MonoBehaviour {
 	private Gyroscope gyro;
 
 	Vector3 gyroscope_rotation;
+
 	public Vector3 firstPosition;
 	public bool gameOver;
 	static public float speed = 10.0f;
@@ -15,12 +16,14 @@ public class Player: MonoBehaviour {
 	public GameObject GameManager;
 	public GameObject _canvas;
 
+	PlayerInfo _playerInfo;
 	GameParam _gameParam;
 	Score _score;
 
 	void Start () {
 		_gameParam = GameManager.GetComponent<GameParam> ();
 		_score = _canvas.GetComponent<Score> ();
+
 		gyro = Input.gyro;
 		gyro.enabled = true;
 		Input.gyro.updateInterval = 0.01f; 
@@ -63,7 +66,7 @@ public class Player: MonoBehaviour {
 
 		speed = Mathf.Sqrt (DirectionVector.x * DirectionVector.x + DirectionVector.y * DirectionVector.y);
 
-//		print ("x : " + DirectionVector.x);
+		print ("x : " + DirectionVector.x);
 		firstPosition += DirectionVector*Time.deltaTime;
 
 
@@ -102,16 +105,29 @@ public class Player: MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		//tag 1: girl, 2: police
+		//tag 1: girl, 2: police 3: item1(무적), 4: item2(복제)
 		switch (other.tag) {
 		case "1":
 			_score.AddGirlScore ();
+			//player가 item을 먹었는지 판단
 			Destroy (other.gameObject);
 			break;
 		case "2":
-			Destroy (this.gameObject);
+			//player가 item을 먹었는지 판단
+			if (_gameParam.itemNum != 2) {
+				
+			} else {
+			
+			}
+
 			_gameParam.gameOver = true;
 			gameOver = _gameParam.gameOver;
+			break;
+		case "3":
+				_gameParam.itemNum = 1;
+			break;
+		case "4":
+				_gameParam.itemNum = 2;
 			break;
 		}
 	}

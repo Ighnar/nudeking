@@ -9,10 +9,9 @@ public class UiSetting : MonoBehaviour {
 	GameParam _gameParam;
 	Vector3 mainOriginP;
 	// Use this for initialization
-
+	/*
 	void Awake () {
 		_gameParam = gameManager.GetComponent<GameParam> ();
-		StartInit (_gameParam.gameStart, false);
 	}
 	//startBtn act
 	public void StartInit(bool startBool, bool replayBool){
@@ -25,5 +24,5 @@ public class UiSetting : MonoBehaviour {
 			_rectTransform.anchoredPosition = mainOriginP;
 			panelView [0].SetActive (false);
 		}
-	}
+	}*/
 }
