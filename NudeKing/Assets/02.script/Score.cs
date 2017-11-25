@@ -29,7 +29,7 @@ public class Score : MonoBehaviour {
 		_gameParam = GameManager.GetComponent<GameParam> ();
 		StartCoroutine ("TimeCountDown");
 	}
-
+	//Timer
 	IEnumerator TimeCountDown(){
 		WaitForSeconds delay = new WaitForSeconds (0.1f);
 		timeToString = time.ToString ();
@@ -37,7 +37,9 @@ public class Score : MonoBehaviour {
 			while (!_gameParam.gameOver) {
 				time += 1;
 				score += 1;
-//			_genItem.GenerateItem (time);
+				//item call
+				//_genItem.GenerateItem (time);
+				//enemy call
 				_genPeople.GeneratePeople (time);
 				//timeToString = string.Format ("{0:00}:{1:00}", time / 60, time % 60);
 				StringBuilder addScore_sb = new StringBuilder ();

@@ -59,6 +59,7 @@
      <Compile Include="Assets\02.script\GenItem.cs" />
      <Compile Include="Assets\02.script\GenPeople.cs" />
      <Compile Include="Assets\02.script\Player.cs" />
+     <Compile Include="Assets\02.script\PlayerInfo.cs" />
      <Compile Include="Assets\02.script\Score.cs" />
      <Compile Include="Assets\02.script\UiSetting.cs" />
  <Reference Include="UnityEngine.UI">

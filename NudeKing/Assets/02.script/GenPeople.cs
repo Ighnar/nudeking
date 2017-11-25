@@ -6,8 +6,8 @@ public class GenPeople : MonoBehaviour {
 	//0-girl 1- police
 	public GameObject[] people;
 
-	int girlGenNum = 1;
-	int policeGenNum = 1;
+	int girlGenNum = 3;
+	int policeGenNum = 4;
 	private EnemyInfo _enemy;
 	// Use this for initialization
 
@@ -24,6 +24,9 @@ public class GenPeople : MonoBehaviour {
 		//		GameObject instancePol = (GameObject) Instantiate(people[1], randomPosition, Quaternion.identity);	
 				_enemy = Instance_enemy(1);
 			}		
+		}
+		if (time % 15 == 0) {
+			policeGenNum += 1;
 		}
 	}	
 
@@ -44,11 +47,11 @@ public class GenPeople : MonoBehaviour {
 		switch (peopleNum) {
 		case 0:
 			random = Random.Range (-10, 10);
-			position = new Vector3(random * 0.1f,6.2f,0.0f);
+			position = new Vector3(-4.2f,random * 0.1f,0.0f);
 			break;
 		case 1:
 			random = Random.Range (15, 25);
-			position = new Vector3(-4.2f,random * 0.1f,0.0f);
+			position = new Vector3(random * 0.1f,6.2f,0.0f);
 			break;
 		}
 		return position;
