@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\02.script\BtnAct.cs" />
      <Compile Include="Assets\02.script\Enemy.cs" />
      <Compile Include="Assets\02.script\EnemyInfo.cs" />
      <Compile Include="Assets\02.script\GameData.cs" />
@@ -59,6 +60,7 @@
      <Compile Include="Assets\02.script\GenPeople.cs" />
      <Compile Include="Assets\02.script\Player.cs" />
      <Compile Include="Assets\02.script\Score.cs" />
+     <Compile Include="Assets\02.script\UiSetting.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Volumes/SUNPAK/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

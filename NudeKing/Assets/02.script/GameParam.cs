@@ -9,11 +9,17 @@ public class GameParam : MonoBehaviour {
 		set;
 	}
 
+	public bool gameStart {
+		get;
+		set;
+	}
+
 	void Awake(){
 		Init ();
 	}
 
 	public void Init(){
 		gameOver = false;
+		gameStart = false;
 	}
 }

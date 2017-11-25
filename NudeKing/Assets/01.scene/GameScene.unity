@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 341936614}
   - component: {fileID: 341936613}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: PlayPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -622,6 +622,7 @@ GameObject:
   - component: {fileID: 1392919948}
   - component: {fileID: 1392919947}
   - component: {fileID: 1392919951}
+  - component: {fileID: 1392919952}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -719,6 +720,20 @@ MonoBehaviour:
   timeText: {fileID: 207039795}
   GameManager: {fileID: 455164303}
   score: 0
+--- !u!114 &1392919952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1392919946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4edd79a305cfe496dbb2bc5d1918e64c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelView:
+  - {fileID: 0}
+  gameManager: {fileID: 455164303}
 --- !u!1001 &1738833807
 Prefab:
   m_ObjectHideFlags: 0
