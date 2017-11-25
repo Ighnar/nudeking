@@ -7,27 +7,37 @@ public class UiSetting : MonoBehaviour {
 	public GameObject[] panelView;
 	public GameObject gameManager;
 
-	GameParam _gameParam;
 	Vector3 mainOriginP;
 	Vector3 destinationP;
 	RectTransform _rectTransform;
 	// Use this for initialization
 
-	void Awake () {
-		_gameParam = gameManager.GetComponent<GameParam> ();
+	void Start(){
+		panelView [2].SetActive (false);
 	}
-		
+
 	//at GameOver call;
 	public void ShowPanel(int panelNum){
-		_rectTransform = panelView[panelNum].GetComponent<RectTransform> ();
-		mainOriginP = _rectTransform.anchoredPosition;
+		if (panelNum != 2) {
 
-		destinationP = new Vector3 (0.0f, 0.0f, 0.0f);
-		_rectTransform.anchoredPosition = destinationP;
+			print ("call");
+			print ("panelNum:" + panelNum);
+			_rectTransform = panelView [panelNum].GetComponent<RectTransform> ();
+			mainOriginP = _rectTransform.anchoredPosition;
+
+			destinationP = new Vector3 (0.0f, 0.0f, 0.0f);
+			_rectTransform.anchoredPosition = destinationP;
+		} else {
+			panelView [panelNum].SetActive(true);
+		}
 	}
 
 	public void DisappearPanel(int panelNum){
-		_rectTransform.anchoredPosition = mainOriginP;
+		if (panelNum != 2) {
+			_rectTransform.anchoredPosition = mainOriginP;
+		} else {
+			panelView [panelNum].SetActive (false);
+		}
 	}
 
 

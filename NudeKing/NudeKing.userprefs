@@ -1,13 +1,35 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/02.script/GameParam.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/02.script/UI/UiSetting.cs">
     <Files>
-      <File FileName="Assets/02.script/Enemy.cs" Line="27" Column="52" />
-      <File FileName="Assets/02.script/Player/Player.cs" Line="1" Column="1" />
-      <File FileName="Assets/02.script/Player/PlayerSource.cs" Line="1" Column="1" />
-      <File FileName="Assets/02.script/Girl.cs" Line="21" Column="36" />
-      <File FileName="Assets/02.script/GameParam.cs" Line="12" Column="7" />
+      <File FileName="Assets/02.script/UI/GameBtnAct.cs" Line="56" Column="35" />
+      <File FileName="Assets/02.script/Player/PlayerSource.cs" Line="114" Column="3" />
+      <File FileName="Assets/02.script/GenItem.cs" Line="27" Column="1" />
+      <File FileName="Assets/02.script/GenPeople.cs" Line="33" Column="34" />
+      <File FileName="Assets/02.script/ZeroBtn.cs" Line="22" Column="1" />
+      <File FileName="Assets/02.script/UI/UiSetting.cs" Line="17" Column="3" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="NudeKing" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="02.script" expanded="True">
+                <Node name="Player" expanded="True" />
+                <Node name="UI" expanded="True">
+                  <Node name="UiSetting.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State name="__root__">
+          <Node name="NudeKing" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
