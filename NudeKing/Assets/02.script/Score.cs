@@ -38,10 +38,15 @@ public class Score : MonoBehaviour {
 				time += 1;
 				score += 1;
 				//item call
-				//_genItem.GenerateItem (time);
+				_genItem.GenerateItem (time);
 				//enemy call
 				_genPeople.GeneratePeople (time);
 				//timeToString = string.Format ("{0:00}:{1:00}", time / 60, time % 60);
+
+				if (_gameParam.UsingItem2) {
+					//무적 activity
+				}
+
 				StringBuilder addScore_sb = new StringBuilder ();
 				addScore_sb.Append (score);
 				timeText.text = addScore_sb.ToString ();
