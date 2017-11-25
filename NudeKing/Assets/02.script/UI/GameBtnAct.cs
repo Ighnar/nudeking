@@ -47,12 +47,12 @@ public class GameBtnAct : MonoBehaviour {
 
 	public void SettingGyroBtnAct(){
 	//show GyzoSetting
-		BtnNum = 3;
+		BtnNum = 2;
 		_uiSetting.ShowPanel (BtnNum);
 	}
 
 	public void CancleBackBtnAct(){
-		BtnNum = 3;
+		BtnNum = 2;
 		_uiSetting.DisappearPanel(BtnNum);
 	}
 }

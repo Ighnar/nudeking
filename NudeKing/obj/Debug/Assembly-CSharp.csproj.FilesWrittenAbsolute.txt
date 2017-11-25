@@ -46,3 +46,5 @@
 /Users/sunpak/Git/nudeking/NudeKing/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/sunpak/Git/nudeking/NudeKing/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/sunpak/Git/nudeking/NudeKing/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/sunpak/Git/nudeking/NudeKing/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/sunpak/Git/nudeking/NudeKing/Temp/bin/Debug/Assembly-CSharp.dll
