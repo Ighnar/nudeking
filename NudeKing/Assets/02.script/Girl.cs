@@ -11,8 +11,6 @@ public class Girl : MonoBehaviour {
 
 	void Start () {
 		_gameParam = GameObject.FindGameObjectWithTag ("gamemanager").GetComponent<GameParam>();
-		 
-
 	}
 	
 	// Update is called once per frame
