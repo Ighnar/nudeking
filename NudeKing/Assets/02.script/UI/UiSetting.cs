@@ -6,6 +6,7 @@ public class UiSetting : MonoBehaviour {
 	//0- gameOverPanel 1- settingPanel 2- gyroSettingPanel
 	public GameObject[] panelView;
 	public GameObject gameManager;
+	public GameObject ZeroPlayer;
 
 	Vector3 mainOriginP;
 	Vector3 destinationP;
@@ -14,14 +15,12 @@ public class UiSetting : MonoBehaviour {
 
 	void Start(){
 		panelView [2].SetActive (false);
+		ZeroPlayer.SetActive (false);
 	}
 
 	//at GameOver call;
 	public void ShowPanel(int panelNum){
 		if (panelNum != 2) {
-
-			print ("call");
-			print ("panelNum:" + panelNum);
 			_rectTransform = panelView [panelNum].GetComponent<RectTransform> ();
 			mainOriginP = _rectTransform.anchoredPosition;
 
@@ -29,6 +28,7 @@ public class UiSetting : MonoBehaviour {
 			_rectTransform.anchoredPosition = destinationP;
 		} else {
 			panelView [panelNum].SetActive(true);
+			ZeroPlayer.SetActive (false);
 		}
 	}
 

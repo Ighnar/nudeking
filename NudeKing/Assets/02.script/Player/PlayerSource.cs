@@ -94,7 +94,7 @@ public class PlayerSource : MonoBehaviour {
 		}
 
 		transform.SetPositionAndRotation(firstPosition, Quaternion.Euler (new Vector3 (0, 0, Angle-90)));
-
+//		this.GetComponent<RectTransform>().SetPositionAndRotation(firstPosition, Quaternion.Euler (new Vector3 (0, 0, Angle-90)));
 	}
 
 	float GetGraph(float a){
