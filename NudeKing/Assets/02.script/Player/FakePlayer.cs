@@ -19,10 +19,10 @@ public class FakePlayer : MonoBehaviour {
 			return;
 		
 
-		transform.Translate (new Vector3 (0, 100, 0) * Time.deltaTime);
+		transform.Translate (new Vector3 (0, 1, 0) * Time.deltaTime);
 		firstPosition = transform.position;
 
-		if (transform.position.y > 1334.0f / 2.0f) {
+		if (transform.position.y > 4.8f) {
 			gameparam.UsingItem2 = false;
 			Destroy (this.gameObject);
 		} 

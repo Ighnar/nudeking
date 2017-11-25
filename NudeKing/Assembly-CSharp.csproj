@@ -65,9 +65,11 @@
      <Compile Include="Assets\02.script\Player\Player.cs" />
      <Compile Include="Assets\02.script\Player\PlayerSource.cs" />
      <Compile Include="Assets\02.script\PlayerInfo.cs" />
-     <Compile Include="Assets\02.script\Score.cs" />
      <Compile Include="Assets\02.script\Status.cs" />
-     <Compile Include="Assets\02.script\UiSetting.cs" />
+     <Compile Include="Assets\02.script\UI\BtnAct.cs" />
+     <Compile Include="Assets\02.script\UI\GameBtnAct.cs" />
+     <Compile Include="Assets\02.script\UI\Score.cs" />
+     <Compile Include="Assets\02.script\UI\UiSetting.cs" />
      <Compile Include="Assets\02.script\ZeroBtn.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Volumes/SUNPAK/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

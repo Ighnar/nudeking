@@ -18,9 +18,9 @@ public class Girl : MonoBehaviour {
 		if (_gameParam.gameOver)
 			return;
 		
-		transform.Translate (new Vector3 (100, 0, 0) * Time.deltaTime);
+		transform.Translate (new Vector3 (1, 0, 0) * Time.deltaTime);
 
-		if (transform.position.x > _gameParam.SizeX / 2.0f) {
+		if (transform.position.x > 2.8f) {
 			Destroy (this.gameObject);
 		} 
 	}
