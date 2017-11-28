@@ -1,0 +1,13 @@
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+/*.csproj
+/*.unityproj
+/*.sln
+/*.suo
+/*.user
+/*.pidb
+/*.VC.db
+
+.vs/
