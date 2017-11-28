@@ -1,17 +1,18 @@
 fileFormatVersion: 2
-guid: 90d066e843cd64b45a7c241b714ad5da
-timeCreated: 1511630738
+guid: 8fb7d8a9bb12ee84eb55c1166118f33c
+timeCreated: 1511867610
 licenseType: Free
 TrueTypeFontImporter:
+  externalObjects: {}
   serializedVersion: 4
   fontSize: 16
   forceTextureCase: -2
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Typo_SsangmunDong
+  fontName: TmonMonsoriOTF
   fontNames:
-  - Typo_SsangmunDong
+  - TmonMonsoriOTF
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
